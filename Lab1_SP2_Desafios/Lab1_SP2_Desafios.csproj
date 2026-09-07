@@ -126,6 +126,15 @@
     <EmbeddedResource Include="Desafio07.resx">
       <DependentUpon>Desafio07.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Desafio08.resx">
+      <DependentUpon>Desafio08.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desafio09.resx">
+      <DependentUpon>Desafio09.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desafio10.resx">
+      <DependentUpon>Desafio10.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

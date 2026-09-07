@@ -27,7 +27,8 @@
             this.lblCiudad.AutoSize = true;
             this.lblCiudad.Location = new System.Drawing.Point(25, 33);
             this.lblCiudad.Name = "lblCiudad";
-            this.lblCiudad.Size = new System.Drawing.Size(45, 13);
+            this.lblCiudad.Size = new System.Drawing.Size(43, 13);
+            this.lblCiudad.TabIndex = 3;
             this.lblCiudad.Text = "Ciudad:";
             // 
             // cboCiudad
@@ -37,12 +38,16 @@
             this.cboCiudad.Location = new System.Drawing.Point(95, 30);
             this.cboCiudad.Name = "cboCiudad";
             this.cboCiudad.Size = new System.Drawing.Size(220, 21);
+            this.cboCiudad.TabIndex = 2;
+            this.cboCiudad.SelectedIndexChanged += new System.EventHandler(this.cboCiudad_SelectedIndexChanged);
             // 
             // cmdMostrar
             // 
-            this.cmdMostrar.Location = new System.Drawing.Point(95, 70);
+            this.cmdMostrar.Enabled = false;
+            this.cmdMostrar.Location = new System.Drawing.Point(195, 57);
             this.cmdMostrar.Name = "cmdMostrar";
             this.cmdMostrar.Size = new System.Drawing.Size(120, 30);
+            this.cmdMostrar.TabIndex = 1;
             this.cmdMostrar.Text = "Mostrar seleccion";
             this.cmdMostrar.UseVisualStyleBackColor = true;
             this.cmdMostrar.Click += new System.EventHandler(this.cmdMostrar_Click);
@@ -52,7 +57,7 @@
             this.lblResultado.Location = new System.Drawing.Point(25, 120);
             this.lblResultado.Name = "lblResultado";
             this.lblResultado.Size = new System.Drawing.Size(400, 25);
-            this.lblResultado.Text = "";
+            this.lblResultado.TabIndex = 0;
             // 
             // Desafio09
             // 
@@ -71,6 +76,7 @@
             this.Load += new System.EventHandler(this.Desafio09_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
     }
 }

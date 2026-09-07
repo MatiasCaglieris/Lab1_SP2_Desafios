@@ -34,17 +34,32 @@ namespace Lab1_SP2_Desafios
         {
             // TODO A: rechazar toda tecla que no sea un digito.
             //         La tecla de retroceso tiene que seguir funcionando.
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
         }
 
         private void mnuGuardarComo_Click(object sender, EventArgs e)
         {
             // TODO C: mostrar un MessageBox con el texto
             //         "Legajo a guardar: <contenido de txtLegajo>"
+            MessageBox.Show($"Legajo a guardar: {txtLegajo.Text}", "Guardar como", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void mnuSalir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtLegajo_TextChanged(object sender, EventArgs e)
+        {
+            lblLegajo.Text = $"Legajo: {txtLegajo.Text}";
+        }
+
+        private void lblAviso_Click(object sender, EventArgs e)
+        {
+            lblAviso.Text = "Ingrese un legajo numerico";
         }
     }
 }

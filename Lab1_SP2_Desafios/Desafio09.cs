@@ -33,12 +33,28 @@ namespace Lab1_SP2_Desafios
             //         Rosario, Cordoba, Mendoza, Bahia Blanca, Salta
             //         Ayuda: cboCiudad.Items.Add("...");
 
+            cboCiudad.Items.Add("Rosario");
+            cboCiudad.Items.Add("Cordoba");
+            cboCiudad.Items.Add("Mendoza");
+            cboCiudad.Items.Add("Bahia Blanca");
+            cboCiudad.Items.Add("Salta");
+
             // TODO 2: hacer que la lista se muestre ordenada alfabeticamente.
+            cboCiudad.Sorted = true;
         }
 
         private void cmdMostrar_Click(object sender, EventArgs e)
         {
-            lblResultado.Text = "Elegiste: " + cboCiudad.SelectedItem.ToString();
+            lblResultado.Text = "Seleccionaste: " + cboCiudad.SelectedItem?.ToString() ?? "Ninguna ciudad seleccionada";
+
+        }
+
+        private void cboCiudad_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmdMostrar.Enabled == false)
+            {
+                cmdMostrar.Enabled = true;
+            }
         }
     }
 }

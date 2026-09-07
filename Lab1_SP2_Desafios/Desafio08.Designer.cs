@@ -20,22 +20,17 @@
             this.lblInfo = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // lblInfo
-            // 
-            this.lblInfo.Location = new System.Drawing.Point(25, 20);
-            this.lblInfo.Name = "lblInfo";
-            this.lblInfo.Size = new System.Drawing.Size(400, 45);
-            this.lblInfo.Text = "Hace clic varias veces sobre la casilla: tiene que pasar por tres estados distintos.";
-            // 
             // chkCobertura
             // 
             this.chkCobertura.AutoSize = true;
             this.chkCobertura.Location = new System.Drawing.Point(30, 80);
             this.chkCobertura.Name = "chkCobertura";
-            this.chkCobertura.Size = new System.Drawing.Size(200, 17);
+            this.chkCobertura.Size = new System.Drawing.Size(136, 17);
+            this.chkCobertura.TabIndex = 1;
             this.chkCobertura.Text = "Cobertura odontologica";
             this.chkCobertura.ThreeState = true;
             this.chkCobertura.UseVisualStyleBackColor = true;
+            this.chkCobertura.CheckedChanged += new System.EventHandler(this.chkCobertura_CheckedChanged);
             this.chkCobertura.CheckStateChanged += new System.EventHandler(this.chkCobertura_CheckStateChanged);
             // 
             // lblEstado
@@ -44,7 +39,18 @@
             this.lblEstado.Location = new System.Drawing.Point(30, 120);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(395, 30);
+            this.lblEstado.TabIndex = 0;
             this.lblEstado.Text = "(sin resolver)";
+            this.lblEstado.Click += new System.EventHandler(this.lblEstado_Click);
+            // 
+            // lblInfo
+            // 
+            this.lblInfo.Location = new System.Drawing.Point(25, 20);
+            this.lblInfo.Name = "lblInfo";
+            this.lblInfo.Size = new System.Drawing.Size(400, 45);
+            this.lblInfo.TabIndex = 2;
+            this.lblInfo.Text = "Hace clic varias veces sobre la casilla: tiene que pasar por tres estados distint" +
+    "os.";
             // 
             // Desafio08
             // 
@@ -61,6 +67,7 @@
             this.Text = "Desafio 08 - Casilla triestable";
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
     }
 }
